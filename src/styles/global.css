@@ -5,8 +5,9 @@
 
 @layer base {
   :root {
-    --color-sage-primary: #87a96b;
-    --color-coral-primary: #ff6b6b;
+    --color-umber-primary: #a87c5a;
+    --color-prussian-primary: #334e68;
+    --color-cadmium-primary: #ffe847;
   }
 
   html {
@@ -14,14 +15,14 @@
   }
 
   body {
-    @apply bg-cream text-charcoal;
+    @apply bg-titanium text-charcoal;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    @apply bg-coral-400 text-white;
+    @apply bg-prussian-700 text-white;
   }
 
   /* Premium focus states */
@@ -30,14 +31,15 @@
   }
 
   *:focus-visible {
-    @apply ring-2 ring-sage-400 ring-offset-2 ring-offset-cream;
+    @apply ring-2 ring-prussian-600 ring-offset-2 ring-offset-titanium;
   }
 }
 
 @layer components {
   /* Premium button styles */
   .btn-primary {
-    @apply relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-sage-400 rounded-full transition-all duration-300 hover:bg-sage-500 hover:shadow-soft active:scale-[0.98] overflow-hidden;
+    @apply relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-prussian-700 transition-all duration-300 hover:bg-prussian-800 hover:shadow-soft active:scale-[0.98] overflow-hidden;
+    border-radius: 2px 18px 3px 20px; /* Slightly imperfect, like hand-drawn */
   }
 
   .btn-primary::before {
@@ -50,12 +52,13 @@
   }
 
   .btn-secondary {
-    @apply relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-sage-600 bg-white border-2 border-sage-200 rounded-full transition-all duration-300 hover:border-sage-400 hover:shadow-soft active:scale-[0.98];
+    @apply relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-prussian-700 bg-white border-2 border-umber-300 transition-all duration-300 hover:border-umber-400 hover:shadow-soft active:scale-[0.98];
+    border-radius: 20px 2px 18px 4px; /* Hand-drawn feel */
   }
 
   /* Text gradient for headings */
   .text-gradient {
-    @apply bg-gradient-to-r from-sage-600 to-sage-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-prussian-700 to-prussian-500 bg-clip-text text-transparent;
   }
 
   /* Premium card style */

@@ -4,37 +4,61 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Sophisticated artist-friendly palette
-        sage: {
-          50: '#f4f6f3',
-          100: '#e5e9e2',
-          200: '#cdd7c7',
-          300: '#a8b89d',
-          400: '#87a96b',  // Primary sage
-          500: '#6b8e4e',
-          600: '#54713d',
-          700: '#435a31',
-          800: '#374829',
-          900: '#2f3d24',
+        // Artist studio palette - actual paint colors
+        umber: {
+          50: '#faf8f6',
+          100: '#f0e9e3',
+          200: '#dcc9b8',
+          300: '#c3a186',
+          400: '#a87c5a',  // Raw umber
+          500: '#8b6542',
+          600: '#6e4f36',
+          700: '#583f2d',
+          800: '#463327',
+          900: '#3a2b22',
         },
-        coral: {
-          50: '#fff5f5',
-          100: '#ffebeb',
-          200: '#ffc7c7',
-          300: '#ff9999',
-          400: '#ff6b6b',  // Primary coral
-          500: '#ff3333',
-          600: '#ed1515',
-          700: '#c41010',
-          800: '#a21212',
-          900: '#861616',
+        cadmium: {
+          50: '#fffdf0',
+          100: '#fff9d1',
+          200: '#fff394',
+          300: '#ffe847',  // Cadmium yellow
+          400: '#ffd700',
+          500: '#f4c430',
+          600: '#d19d00',
+          700: '#a67700',
+          800: '#895f00',
+          900: '#744e00',
         },
-        cream: '#FFF8E7',
-        charcoal: '#2B2B2B',
-        // Accent colors
-        lavender: '#B19CD9',
-        gold: '#F4A460',
-        sky: '#87CEEB',
+        prussian: {
+          50: '#f0f4f8',
+          100: '#d9e2ec',
+          200: '#bcccdc',
+          300: '#9fb3c8',
+          400: '#829ab1',
+          500: '#627d98',
+          600: '#486581',
+          700: '#334e68',  // Prussian blue
+          800: '#243b53',
+          900: '#1a2f45',
+        },
+        sienna: {
+          50: '#fef6f3',
+          100: '#fce8df',
+          200: '#f8c9b0',
+          300: '#f3a679',
+          400: '#ee8245',  // Burnt sienna
+          500: '#e85d20',
+          600: '#d04012',
+          700: '#ac3010',
+          800: '#8c2613',
+          900: '#732113',
+        },
+        titanium: '#FAFAFA',  // Clean white
+        charcoal: '#2B2424',  // Sketching charcoal
+        // Paint splatter accent colors
+        violet: '#8B7AB8',
+        vermillion: '#E34234',
+        ochre: '#CC7722',
       },
       fontFamily: {
         'display': ['Playfair Display', 'serif'],

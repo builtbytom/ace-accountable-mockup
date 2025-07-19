@@ -13,12 +13,16 @@ const navItems = [
     <div class="flex items-center justify-between h-20">
       <!-- Logo -->
       <a href="/" class="flex items-center space-x-3 group">
-        <div class="w-10 h-10 bg-gradient-to-br from-sage-400 to-sage-500 rounded-xl flex items-center justify-center text-white font-bold text-lg transform group-hover:rotate-3 transition-transform duration-300">
-          A
+        <div class="relative">
+          <!-- Paint blob background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-cadmium-300 to-sienna-400 opacity-20 blur-sm scale-110" style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;"></div>
+          <div class="relative w-10 h-10 bg-prussian-700 flex items-center justify-center text-white font-bold text-lg transform group-hover:rotate-3 transition-transform duration-300" style="border-radius: 2px 15px 3px 12px;">
+            A
+          </div>
         </div>
         <div>
           <div class="font-display text-xl font-bold text-charcoal">ACE Accountable</div>
-          <div class="text-xs text-sage-600 -mt-1">Bookkeeping for Creatives</div>
+          <div class="text-xs text-umber-600 -mt-1">Bookkeeping for Creatives</div>
         </div>
       </a>
       
@@ -30,8 +34,8 @@ const navItems = [
             class={`
               text-sm font-medium transition-all duration-300
               ${item.highlight 
-                ? 'text-coral-500 hover:text-coral-600 font-semibold' 
-                : 'text-charcoal hover:text-sage-600'
+                ? 'text-sienna-400 hover:text-sienna-500 font-semibold' 
+                : 'text-charcoal hover:text-prussian-600'
               }
             `}
           >
@@ -42,16 +46,16 @@ const navItems = [
       
       <!-- CTA and Contact -->
       <div class="hidden md:flex items-center space-x-6">
-        <a href="tel:860-365-1147" class="text-sm font-medium text-sage-600 hover:text-sage-700 transition-colors">
+        <a href="tel:860-365-1147" class="text-sm font-medium text-umber-600 hover:text-umber-700 transition-colors">
           📞 860-365-1147
         </a>
-        <a href="#contact" class="inline-flex items-center px-6 py-2.5 text-sm font-medium text-white bg-sage-500 rounded-full hover:bg-sage-600 transition-all duration-300">
+        <a href="#contact" class="inline-flex items-center px-6 py-2.5 text-sm font-medium text-white bg-prussian-700 hover:bg-prussian-800 transition-all duration-300" style="border-radius: 2px 12px 3px 14px;">
           Book Free Consultation
         </a>
       </div>
       
       <!-- Mobile Menu Button -->
-      <button class="md:hidden p-2 rounded-lg hover:bg-sage-50 transition-colors" id="mobile-menu-button">
+      <button class="md:hidden p-2 rounded-lg hover:bg-umber-50 transition-colors" id="mobile-menu-button">
         <svg class="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
