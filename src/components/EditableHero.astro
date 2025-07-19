@@ -1,0 +1,153 @@
+---
+// This component demonstrates how content would be editable via CMS
+const isEditor = Astro.url.searchParams.get('editor') === 'true';
+
+// In production, this would fetch from the CMS endpoint
+let content = {
+  hero: {
+    eyebrow: "Connecticut's Creative Bookkeeper",
+    headline: {
+      line1: "Your studio might be",
+      highlight: "chaos",
+      line2: "Your books don't have to be."
+    },
+    subheadline: "I'm Jenna. I help Connecticut artists track commissions, find every art supply deduction, and turn creative income into clear financial pictures. No judgment, just results.",
+    cta1: "Book Your Free Artist Consultation",
+    cta2: "Try Studio Expansion Calculator"
+  },
+  trustIndicators: {
+    stat1: "Trusted by 50+ CT artists",
+    stat2: "$3K+ average in found deductions",
+    stat3: "Studio-friendly since 2015"
+  }
+};
+
+// If in editor mode, fetch from CMS
+if (typeof window !== 'undefined' && isEditor) {
+  try {
+    const response = await fetch('/.netlify/functions/cms-content?section=homepage');
+    if (response.ok) {
+      const data = await response.json();
+      content = data;
+    }
+  } catch (error) {
+    console.error('Failed to fetch CMS content:', error);
+  }
+}
+---
+
+<section class="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-titanium pt-20">
+  <!-- Paint texture background -->
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iY2FudmFzIiB4PSIwIiB5PSIwIiB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMC41IiBmaWxsPSIjMDAwIiBvcGFjaXR5PSIwLjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjY2FudmFzKSIvPjwvc3ZnPg=='); background-size: 100px 100px;"></div>
+  
+  <!-- Paint splatters -->
+  <div class="absolute top-10 right-0 w-96 h-96 opacity-10">
+    <svg viewBox="0 0 400 400" class="w-full h-full">
+      <path d="M200,100 Q250,150 200,200 T150,250 Q100,200 150,150 T200,100" fill="#ffe847" opacity="0.3" />
+      <circle cx="320" cy="80" r="40" fill="#e34234" opacity="0.2" />
+      <circle cx="280" cy="120" r="25" fill="#8B7AB8" opacity="0.2" />
+      <path d="M50,300 Q100,320 80,350 T50,300" fill="#CC7722" opacity="0.3" />
+    </svg>
+  </div>
+  
+  <!-- Brushstroke accent -->
+  <div class="absolute bottom-0 left-0 w-full h-32 opacity-5">
+    <svg viewBox="0 0 1200 200" preserveAspectRatio="none" class="w-full h-full">
+      <path d="M0,100 Q200,50 400,100 T800,100 T1200,100 L1200,200 L0,200 Z" fill="#334e68" />
+    </svg>
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Eyebrow text (CMS Editable) -->
+    <div class="inline-flex items-center space-x-2 bg-cadmium-300/20 backdrop-blur-sm px-6 py-2 mb-8 shadow-soft reveal" style="border-radius: 3px 15px 4px 12px;">
+      <span class="w-2 h-2 bg-vermillion rounded-full animate-pulse"></span>
+      <span class="text-sm font-medium text-prussian-700" data-cms="hero.eyebrow">{content.hero.eyebrow}</span>
+    </div>
+    
+    <!-- Main headline with hand-drawn underline (CMS Editable) -->
+    <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 reveal">
+      <span class="text-charcoal" data-cms="hero.headline.line1">{content.hero.headline.line1}</span>
+      <br />
+      <span class="relative inline-block">
+        <span class="text-prussian-700" data-cms="hero.headline.highlight">{content.hero.headline.highlight}</span>
+        <svg class="absolute -bottom-2 left-0 w-full" height="20" viewBox="0 0 200 20">
+          <path d="M5,15 Q50,5 100,15 T195,15" stroke="#ffe847" stroke-width="8" fill="none" opacity="0.7" />
+        </svg>
+      </span>
+      <br />
+      <span class="text-charcoal" data-cms="hero.headline.line2">{content.hero.headline.line2}</span>
+    </h1>
+    
+    <!-- Subheadline (CMS Editable) -->
+    <p class="text-lg sm:text-xl md:text-2xl text-charcoal/80 max-w-3xl mx-auto mb-10 leading-relaxed reveal" data-cms="hero.subheadline">
+      {content.hero.subheadline}
+    </p>
+    
+    <!-- CTAs with paint blob backgrounds (CMS Editable) -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 reveal">
+      <div class="relative">
+        <div class="absolute inset-0 bg-cadmium-300/20 blur-xl rounded-full scale-110"></div>
+        <button class="btn-primary relative group">
+          <span class="relative z-10" data-cms="hero.cta1">{content.hero.cta1}</span>
+          <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <a href="#calculator" class="btn-secondary group">
+        <span class="text-sienna-400">🎨</span>
+        <span class="ml-2" data-cms="hero.cta2">{content.hero.cta2}</span>
+      </a>
+    </div>
+    
+    <!-- Trust indicators with paint dot separators (CMS Editable) -->
+    <div class="flex flex-wrap items-center justify-center gap-8 text-sm text-charcoal/60 reveal">
+      <div class="flex items-center space-x-2">
+        <svg class="w-5 h-5 text-cadmium-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+        </svg>
+        <span data-cms="trustIndicators.stat1">{content.trustIndicators.stat1}</span>
+      </div>
+      
+      <div class="w-2 h-2 bg-vermillion rounded-full opacity-40"></div>
+      
+      <div class="flex items-center space-x-2">
+        <svg class="w-5 h-5 text-umber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span data-cms="trustIndicators.stat2">{content.trustIndicators.stat2}</span>
+      </div>
+      
+      <div class="w-2 h-2 bg-violet rounded-full opacity-40"></div>
+      
+      <div class="flex items-center space-x-2">
+        <svg class="w-5 h-5 text-prussian-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+        </svg>
+        <span data-cms="trustIndicators.stat3">{content.trustIndicators.stat3}</span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scroll indicator with paint drip -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center reveal">
+    <div class="text-xs text-charcoal/40 mb-2">Scroll to explore</div>
+    <div class="relative">
+      <div class="w-6 h-10 border-2 border-charcoal/20 rounded-full relative">
+        <div class="w-1.5 h-1.5 bg-prussian-600 rounded-full absolute top-2 left-1/2 transform -translate-x-1/2 animate-bounce"></div>
+      </div>
+      <!-- Paint drip -->
+      <svg class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-4 h-6" viewBox="0 0 20 30">
+        <path d="M10,0 Q8,10 10,20 Q12,10 10,0" fill="#334e68" opacity="0.1" />
+      </svg>
+    </div>
+  </div>
+</section>
+
+{isEditor && (
+  <div class="fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg">
+    <p class="text-sm text-gray-600">CMS Editor Mode Active</p>
+    <p class="text-xs text-gray-500">Click any text with data-cms attribute to edit</p>
+  </div>
+)}

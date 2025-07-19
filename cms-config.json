@@ -1,0 +1,62 @@
+{
+  "client": {
+    "businessName": "ACE Accountable",
+    "businessType": "bookkeeping",
+    "location": "Middletown, CT",
+    "primaryColor": "#334e68",
+    "siteId": "ace-accountable"
+  },
+  "editableSections": {
+    "homepage": {
+      "hero": {
+        "eyebrow": true,
+        "headline": {
+          "line1": true,
+          "highlight": true,
+          "line2": true
+        },
+        "subheadline": true,
+        "cta1": true,
+        "cta2": true
+      },
+      "trustIndicators": {
+        "stat1": true,
+        "stat2": true,
+        "stat3": true
+      }
+    },
+    "forArtists": {
+      "title": true,
+      "subtitle": true,
+      "features": {
+        "editable": true,
+        "fields": ["title", "description"]
+      }
+    },
+    "services": {
+      "title": true,
+      "subtitle": true,
+      "packages": {
+        "bookkeeping": {
+          "title": true,
+          "subtitle": true,
+          "features": true,
+          "cta": true,
+          "note": true
+        },
+        "addOns": {
+          "title": true,
+          "subtitle": true,
+          "features": true,
+          "cta": true
+        }
+      }
+    },
+    "contact": {
+      "phone": true,
+      "email": true,
+      "location": true
+    }
+  },
+  "notes": "This configuration shows what content Jenna can edit through the CMS portal at ibuildcalm.com/portal"
+}
