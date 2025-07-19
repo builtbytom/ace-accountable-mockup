@@ -8,7 +8,7 @@ const navItems = [
 ];
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-40 bg-cream/80 backdrop-blur-md border-b border-sage-100">
+<nav class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-gray-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
       <!-- Logo -->
@@ -23,15 +23,15 @@ const navItems = [
       </a>
       
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-1">
+      <div class="hidden md:flex items-center space-x-6">
         {navItems.map((item) => (
           <a
             href={item.href}
             class={`
-              px-5 py-2 rounded-full text-sm font-medium transition-all duration-300
+              text-sm font-medium transition-all duration-300
               ${item.highlight 
-                ? 'bg-coral-400 text-white hover:bg-coral-500 hover:shadow-soft' 
-                : 'text-charcoal hover:bg-sage-50 hover:text-sage-700'
+                ? 'text-coral-500 hover:text-coral-600 font-semibold' 
+                : 'text-charcoal hover:text-sage-600'
               }
             `}
           >
@@ -45,9 +45,9 @@ const navItems = [
         <a href="tel:860-365-1147" class="text-sm font-medium text-sage-600 hover:text-sage-700 transition-colors">
           📞 860-365-1147
         </a>
-        <button class="btn-primary text-sm">
+        <a href="#contact" class="inline-flex items-center px-6 py-2.5 text-sm font-medium text-white bg-sage-500 rounded-full hover:bg-sage-600 transition-all duration-300">
           Book Free Consultation
-        </button>
+        </a>
       </div>
       
       <!-- Mobile Menu Button -->
@@ -61,7 +61,7 @@ const navItems = [
   
   <!-- Mobile Menu -->
   <div class="md:hidden hidden" id="mobile-menu">
-    <div class="px-4 pt-2 pb-6 space-y-2 bg-cream border-t border-sage-100">
+    <div class="px-4 pt-2 pb-6 space-y-2 bg-white border-t border-gray-200">
       {navItems.map((item) => (
         <a
           href={item.href}
