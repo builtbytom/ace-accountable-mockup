@@ -37,12 +37,16 @@
 @layer components {
   /* Premium button styles */
   .btn-primary {
-    @apply relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-sage-400 rounded-full transition-all duration-300 hover:bg-sage-500 hover:shadow-soft active:scale-[0.98] overflow-hidden group;
+    @apply relative inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-sage-400 rounded-full transition-all duration-300 hover:bg-sage-500 hover:shadow-soft active:scale-[0.98] overflow-hidden;
   }
 
   .btn-primary::before {
-    @apply absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out;
+    @apply absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full transition-transform duration-700 ease-out;
     content: '';
+  }
+  
+  .btn-primary:hover::before {
+    @apply translate-x-full;
   }
 
   .btn-secondary {

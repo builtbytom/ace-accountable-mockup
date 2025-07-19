@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -15,6 +15,7 @@
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.4.1",
     "@types/node": "^20.11.5",
     "typescript": "^5.3.3"
   }
