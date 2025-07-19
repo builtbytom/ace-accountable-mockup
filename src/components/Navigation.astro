@@ -1,0 +1,105 @@
+---
+const navItems = [
+  { label: 'For Artists', href: '#for-artists' },
+  { label: 'Services', href: '#services' },
+  { label: 'Studio Calculator', href: '#calculator', highlight: true },
+  { label: 'Success Stories', href: '#testimonials' },
+  { label: 'About', href: '#about' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-40 bg-cream/80 backdrop-blur-md border-b border-sage-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 bg-gradient-to-br from-sage-400 to-sage-500 rounded-xl flex items-center justify-center text-white font-bold text-lg transform group-hover:rotate-3 transition-transform duration-300">
+          A
+        </div>
+        <div>
+          <div class="font-display text-xl font-bold text-charcoal">ACE Accountable</div>
+          <div class="text-xs text-sage-600 -mt-1">Bookkeeping for Creatives</div>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-1">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`
+              px-5 py-2 rounded-full text-sm font-medium transition-all duration-300
+              ${item.highlight 
+                ? 'bg-coral-400 text-white hover:bg-coral-500 hover:shadow-soft' 
+                : 'text-charcoal hover:bg-sage-50 hover:text-sage-700'
+              }
+            `}
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+      
+      <!-- CTA and Contact -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="tel:860-365-1147" class="text-sm font-medium text-sage-600 hover:text-sage-700 transition-colors">
+          📞 860-365-1147
+        </a>
+        <button class="btn-primary text-sm">
+          Book Free Consultation
+        </button>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden p-2 rounded-lg hover:bg-sage-50 transition-colors" id="mobile-menu-button">
+        <svg class="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div class="md:hidden hidden" id="mobile-menu">
+    <div class="px-4 pt-2 pb-6 space-y-2 bg-cream border-t border-sage-100">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class={`
+            block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300
+            ${item.highlight 
+              ? 'bg-coral-400 text-white' 
+              : 'text-charcoal hover:bg-sage-50'
+            }
+          `}
+        >
+          {item.label}
+        </a>
+      ))}
+      <div class="pt-4 space-y-3">
+        <a href="tel:860-365-1147" class="block text-center py-3 text-sage-600 font-medium">
+          📞 860-365-1147
+        </a>
+        <button class="btn-primary w-full">
+          Book Free Consultation
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+  
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileMenuButton?.contains(e.target as Node) && !mobileMenu?.contains(e.target as Node)) {
+      mobileMenu?.classList.add('hidden');
+    }
+  });
+</script>

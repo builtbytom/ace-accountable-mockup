@@ -1,0 +1,273 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Bookkeeping for Connecticut Artists & Creatives">
+  <Navigation />
+  <Hero />
+  
+  <!-- For Artists Section -->
+  <section id="for-artists" class="py-24 bg-white relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-coral-100/20 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-4">
+          Why Artists Choose ACE
+        </h2>
+        <p class="text-xl text-charcoal/70 max-w-2xl mx-auto">
+          Because I understand that your business doesn't fit in a standard accounting box
+        </p>
+      </div>
+      
+      <!-- Features Grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="card reveal group">
+          <div class="relative z-10">
+            <div class="w-14 h-14 bg-gradient-to-br from-coral-400 to-coral-500 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform">
+              🎨
+            </div>
+            <h3 class="font-display text-2xl font-semibold text-charcoal mb-3">
+              Project-Based Income Tracking
+            </h3>
+            <p class="text-charcoal/70 leading-relaxed">
+              Not just monthly books—I track each commission, exhibition sale, and workshop 
+              separately so you know which projects actually make money.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="card reveal group">
+          <div class="relative z-10">
+            <div class="w-14 h-14 bg-gradient-to-br from-sage-400 to-sage-500 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform">
+              💰
+            </div>
+            <h3 class="font-display text-2xl font-semibold text-charcoal mb-3">
+              Every Deduction Found
+            </h3>
+            <p class="text-charcoal/70 leading-relaxed">
+              That vintage frame? Deductible. Studio rent paid in paintings? I'll handle it. 
+              2am art supply runs? Got you covered.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="card reveal group">
+          <div class="relative z-10">
+            <div class="w-14 h-14 bg-gradient-to-br from-lavender to-lavender/80 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform">
+              📊
+            </div>
+            <h3 class="font-display text-2xl font-semibold text-charcoal mb-3">
+              Grant-Ready Financials
+            </h3>
+            <p class="text-charcoal/70 leading-relaxed">
+              Need financial statements for that arts grant? I create reports that speak 
+              "grant committee" while keeping your actual books in artist-speak.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="card reveal group">
+          <div class="relative z-10">
+            <div class="w-14 h-14 bg-gradient-to-br from-sky to-sky/80 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform">
+              📅
+            </div>
+            <h3 class="font-display text-2xl font-semibold text-charcoal mb-3">
+              Feast & Famine Planning
+            </h3>
+            <p class="text-charcoal/70 leading-relaxed">
+              Big commission in March, nothing in April? I help you smooth out the 
+              creative income rollercoaster with smart cash flow planning.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="card reveal group">
+          <div class="relative z-10">
+            <div class="w-14 h-14 bg-gradient-to-br from-gold to-gold/80 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform">
+              🏛️
+            </div>
+            <h3 class="font-display text-2xl font-semibold text-charcoal mb-3">
+              Multi-Revenue Mastery
+            </h3>
+            <p class="text-charcoal/70 leading-relaxed">
+              Gallery sales, online prints, teaching workshops, Patreon—I track all your 
+              creative revenue streams without the confusion.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="card reveal group">
+          <div class="relative z-10">
+            <div class="w-14 h-14 bg-gradient-to-br from-coral-300 to-sage-300 rounded-2xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform">
+              💬
+            </div>
+            <h3 class="font-display text-2xl font-semibold text-charcoal mb-3">
+              No Judgment Zone
+            </h3>
+            <p class="text-charcoal/70 leading-relaxed">
+              Shoebox of receipts? Three years behind? Mixing personal and business? 
+              I've seen it all, and I'm here to help, not judge.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section id="services" class="py-24 bg-gradient-to-br from-sage-50 to-cream relative overflow-hidden">
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-sage-200/20 rounded-full blur-3xl"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-display text-4xl md:text-5xl font-bold text-charcoal mb-4">
+          Simple Packages, Creative Results
+        </h2>
+        <p class="text-xl text-charcoal/70 max-w-2xl mx-auto">
+          Choose the level of support that fits your creative business
+        </p>
+      </div>
+      
+      <!-- Pricing Section -->
+      <div class="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Core Bookkeeping Package -->
+        <div class="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 reveal border-2 border-coral-200">
+          <div class="text-center mb-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-sage-100 rounded-2xl mb-4">
+              <span class="text-3xl">📚</span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-charcoal mb-2">Complete Bookkeeping</h3>
+            <div class="text-sm text-sage-600 mb-4">Custom pricing for your creative business</div>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-sage-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Transaction recording & categorization</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-sage-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Bank & credit card reconciliation</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-sage-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Balance sheet reconciliation</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-sage-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Monthly financial statements</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-sage-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Monthly video conference</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-sage-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Unlimited email support</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-sage-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Tax professional communication</span>
+            </li>
+          </ul>
+          
+          <button class="btn-primary w-full">
+            Get Custom Quote
+          </button>
+          
+          <p class="text-xs text-center text-charcoal/50 mt-4">
+            Cancel anytime with 30 days notice
+          </p>
+        </div>
+        
+        <!-- Add-On Services -->
+        <div class="bg-white rounded-3xl p-8 shadow-soft hover:shadow-xl transition-all duration-300 reveal">
+          <div class="text-center mb-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-coral-100 rounded-2xl mb-4">
+              <span class="text-3xl">🎨</span>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-charcoal mb-2">Creative Add-Ons</h3>
+            <div class="text-sm text-sage-600 mb-4">Enhance your bookkeeping package</div>
+          </div>
+          
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-coral-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Rescue services (catch-up bookkeeping)</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-coral-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Budgeting & cash flow planning</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-coral-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Revenue forecasting</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-coral-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Industry benchmarking</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-coral-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">1099 preparation</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-coral-400 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+              </svg>
+              <span class="text-charcoal/80">Grant application financials</span>
+            </li>
+          </ul>
+          
+          <button class="btn-secondary w-full">
+            Learn About Add-Ons
+          </button>
+        </div>
+      </div>
+      
+      <!-- Bottom CTA -->
+      <div class="text-center mt-12 reveal">
+        <p class="text-charcoal/60 mb-4">Not sure which package is right for you?</p>
+        <a href="#calculator" class="text-coral-500 font-medium hover:text-coral-600 transition-colors">
+          Take the 2-minute Studio Assessment →
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
